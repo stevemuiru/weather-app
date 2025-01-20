@@ -35,10 +35,11 @@ const fetchData = async (location) => {
 
 const displayWeather = (data) => {
   weatherInfo.innerHTML = `
-    <h2>Weather for ${data.resolvedAddress}</h2>
-    <p>Current Temperature: ${data.currentConditions.temp}°C</p>
-    <p>Conditions: ${data.currentConditions.conditions}</p>
-    <p>Humidity: ${data.currentConditions.humidity}%</p>
-    <p>Wind Speed: ${data.currentConditions.windspeed} km/h</p>
+    <h2 class="mb-3">${data.resolvedAddress}</h2>
+    <p class="display-4 fw-bold">${data.currentConditions.temp}°C</p>
+    <p class="fs-5">${data.currentConditions.conditions}</p>
+    <p>Humidity: <strong>${data.currentConditions.humidity}%</strong></p>
+    <p>Wind Speed: <strong>${data.currentConditions.windspeed} km/h</strong></p>
   `;
 };
+
